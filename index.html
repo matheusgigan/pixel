@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu" class="tela ativa">
+        <h1>Bem-vindo ao Pomodoro</h1>
+        <button id="loginBtn" onclick="mostrarTela('telaLogin')">Login</button>
+        <button id="cadastroBtn" onclick="mostrarTela('telaCadastro')">Cadastro</button>
+    </div>
+
+    <div class="telaLogin tela">
+        <div class="formulario">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+        <p>Não tem uma conta? <a href="#" onclick="mostrarTela('telaCadastro')">Cadastre-se</a></p>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div class="telaCadastro tela">
+        <h1>Cadastro</h1>
+        <form id="cadastroForm">
+            <label for="username">Nome:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit" class="submit-btn">Cadastrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="#" onclick="mostrarTela('telaLogin')">Faça login</a></p>
+    </div>
+
+    <div class="telaInicial tela">
+        <p id="moedas">0</p>
+        <p id="fome">0</p>
+        <p id="felicidade">0</p>
+        <button id="lojaBtn" onclick="mostrarTela('telaLoja')">Loja</button>
+        <button id="alimentarBtn" onclick="mostrarTela('telaAlimentar')">Alimentar</button>
+        <button id="rotinaBtn" onclick="mostrarTela('telaPrincipal')">Minhas Rotinas</button>
+    </div>
+
+    <!-- Tela Principal -->
+    <div id="inicio" class="telaPrincipal tela card">
+        <h2>Minhas Rotinas</h2>
+        <select id="seletorRotina"></select>
+        <button id="iniciarRotinaBtn" onclick="mostrarTela('telaPomodoro')">Iniciar rotina</button>
+        <p id="progresso"></p>
+        <hr>
+        <button onclick="mostrarTela('telaCriar')">Nova rotina</button>
+    </div>
+      
+    <!-- Tela de Criar Nova Rotina -->
+    <div id="novaRotina" class="telaCriar tela">
+        <h2>Criar nova rotina</h2>
+        <input type="text" id="nomeRotina" placeholder="Nome da rotina">
+        <input type="number" id="tempoRotina" placeholder="Tempo (em minutos)" min="1">
+        <button id="salvarRotinaBtn">Salvar</button>
+        <button onclick="mostrarTela('telaPrincipal')">Cancelar</button>
+    </div>
+
+    <!-- Tela de Pomodoro -->
+    <div id="pomodoro" class="pomodoro tela">
+        <h2 id="tituloPomodoro">Pomodoro</h2>
+        <p id="contador">00:00</p>
+        <button id="startPomodoro">Começar</button>
+        <button>Voltar</button>
+    </div>
+    <script src="script.js"></script> <!-- Mover para o final do body -->
+</body>
+</html>
