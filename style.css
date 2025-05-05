@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAdJJREFUWEftlzFOxDAQRWOQKEA0SJyJarUNV6FG1FwC+i12RQM3gLMg0SAoFu0GfbPfmsyO7dixoCFNEtvxPH+Pvx03W6z7bnc9XB75p74PRZ1zzpfNFmt/Rxtdzzr2U3J3BJAdP61W3cV8PuiHIDI4G6CuFsID6FGhYwsiVV4LAX17a1QpGWNwNRBVADG4KgBOQUnixNrW5EFIwhYANX38KgCXuVQqCnB2ezIY0OvnQXd4/R7KZP3b1ceg3HqXK425grIkgAyKgHxncLyfH299cAZlHd75fP/yNTAvtAcEVt8kABlEA0j57p5/XFReXMp+GWJOIIecm9QUWKOUAFSGdw0gfcTBhYIcwlKl5Jp+c3MapEednirAoA1yBv1YCgQbB8CAaAeRAsDHCMBLJ6dOwiyA9vgaR9MqYUofl8u9TU2381NgGUgriJw5RQG4VGrsNRdU1v89AJZhy82lZPReZXkkK/24Rft/gCYKWNvs2OmZDGBtsww+BmwSgHWa5vEdEPS4lKmNArBGYgXXlq73GNRrY8sCxE4yloNbx3VdptWIAli/afIkMzbJYvsM1TABYvKys9iPSSkU1NgDyAVvDqGtmNKXjqa2fTYJazse+903Wjl66gQnFsIAAAAASUVORK5CYIIA);
+    background-repeat: no-repeat; /* não repete a imagem */
+    background-size: cover; /* redimensiona para preencher a tela */
+    background-position: center;
+    background-color: #000; /* cor de fundo caso falhe */
+    image-rendering: pixelated; /* não deixar a pixel art borrada */
+    background-repeat: repeat;
+}
+
+.tela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 0px black; /* opcional para o texto ficar mais visível */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
